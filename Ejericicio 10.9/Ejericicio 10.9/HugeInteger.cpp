@@ -84,7 +84,7 @@ HugeInteger HugeInteger::operator+(const string& op2) const
 // -Para lograr eso utiliza un arreglo de datos de tipo short.
 // -Desglosa cada caracter y no asigna a un dato empezando por el ultimo en el arreglo.
 // -Para realizar operaciones matemáticas se implementan funciones de sobrecarga con una
-//  logica interna las cuales permiten tener los resuktados requeridos.
+//  logica interna las cuales permiten tener los resultados requeridos.
 
 // B) Restriciones de la clase:
 
@@ -154,7 +154,7 @@ HugeInteger HugeInteger::operator*(const HugeInteger& op2) const
 	for (int i{ 0 }; i < 40; i++)
 	{
 		if (op2.integer[i] > 0)
-		{
+		{	
 			h = i;
 			break;
 		}
@@ -246,12 +246,6 @@ HugeInteger HugeInteger::operator/(const string& op2) const
 	// operator+ for two HugeInteger objects
 	return *this / (HugeInteger(op2));
 }
-
-
-
-
-
-
 
 
 
