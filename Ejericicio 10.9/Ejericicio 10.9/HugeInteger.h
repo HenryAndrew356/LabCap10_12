@@ -4,13 +4,14 @@
 #include <array>
 #include <iostream>
 #include <string>
+#include <math.h>
 
 class HugeInteger 
 {
 	friend std::ostream& operator<<(std::ostream&, const HugeInteger&);
 public:
 	static const int digits{ 40 }; // maximum digits in a HugeInteger
-	HugeInteger(long = 0); // conversion/default constructor
+	HugeInteger(unsigned long int = 0); // conversion/default constructor
 	HugeInteger(const std::string&); // conversion constructor
 
 //SOBRECARGA DEL OPERADOR --> ADICION/SUMA
@@ -30,6 +31,17 @@ public:
 	HugeInteger operator*(const HugeInteger&) const;
 	HugeInteger operator*(int) const;
 	HugeInteger operator*(const std::string&) const;
+
+//SOBRECARGA DEL OPERADOR --> DIVISIÓN
+	HugeInteger operator/(const HugeInteger&) const;
+	HugeInteger operator/(int) const;
+	HugeInteger operator/(const std::string&) const;
+
+//SOBRECARGA DEL OPERADOR --> IGUALDAD
+	bool operator==(const HugeInteger&) const;
+	bool operator==(int) const;
+	bool operator==(const std::string&) const;
+
 private:
 	std::array<short, digits> integer{}; // default init to 0s
 };

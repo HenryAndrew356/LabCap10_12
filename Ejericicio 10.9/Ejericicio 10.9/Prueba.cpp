@@ -2,9 +2,9 @@
 #include "HugeInteger.h"
 using namespace std;
 int main() {
-	HugeInteger n0{ 5 };
+	HugeInteger n0{ 25 };
 	HugeInteger n1{ 7654321 }; // Aplicacion de HugeInteger(long = 0);
-	HugeInteger n2{ 7891234 }; // Aplicacion de HugeInteger(long = 0);
+	HugeInteger n2{ 84492408 }; // Aplicacion de HugeInteger(long = 0);
 	HugeInteger n3{ "99999999999999999999999999999" }; // Aplicacion de HugeInteger(const std::string&);
 	HugeInteger n4{ "1" };// Aplicacion de HugeInteger(const std::string&);
 	HugeInteger n5; // Aplicacion de HugeInteger(long = 0);
@@ -16,5 +16,7 @@ int main() {
 	cout << n1 << " + " << 9 << " = " << n5 << "\n\n"; // Aplica sobrec de operad. de salida
 	n5 = n2 + "10000"; //Aplicacion de HugeInteger operator+(const std::string&) const;
 	cout << n2 << " + " << "10000" << " = " << n5 <<"\n";
-	cout << (n2 * n0) << endl;
+	cout <<"La multiplicacion de n2=" << n2 << " * n0=" << n0 << " es " << (n2 * n0) << endl;
+	cout <<"La division de n2="<<n2 << " / n0="<<n0<<" es " <<(n2 / n0) << endl;
+	cout <<"Es n0 Igual que n1 1=SI , 0=NO -->"<< (n0 == n1)<<"<--" << endl;
 }
