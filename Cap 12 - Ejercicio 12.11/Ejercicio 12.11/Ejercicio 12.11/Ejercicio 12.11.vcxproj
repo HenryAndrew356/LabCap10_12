@@ -139,10 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BasePlusComissionEmployee.cpp" />
+    <ClCompile Include="CommisionEmployee.cpp" />
+    <ClCompile Include="Date.cpp" />
     <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="SalariedEmployee.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BasePlusCommissionEmployee.h" />
+    <ClInclude Include="CommissionEmployee.h" />
+    <ClInclude Include="Date.h" />
     <ClInclude Include="Employee.h" />
     <ClInclude Include="SalariedEmployee.h" />
   </ItemGroup>
