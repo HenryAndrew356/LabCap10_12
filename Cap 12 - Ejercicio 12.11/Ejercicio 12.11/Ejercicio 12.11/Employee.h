@@ -23,7 +23,5 @@ private:
 	std::string firstName;
 	std::string lastName;
 	std::string socialSecurityNumber;
-	
 };
-
 #endif // EMPLOYEE_H
