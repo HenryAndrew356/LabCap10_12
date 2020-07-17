@@ -12,7 +12,8 @@ BasePlusCommissionEmployee::BasePlusCommissionEmployee(
 	setBaseSalary(salary); // validate and store base salary
 }
 // set base salary
-void BasePlusCommissionEmployee::setBaseSalary(double salary) {
+void BasePlusCommissionEmployee::setBaseSalary(double salary) 
+{
 	if (salary < 0.0)
 	{
 		throw invalid_argument("Salary must be >= 0.0");
@@ -24,13 +25,14 @@ double BasePlusCommissionEmployee::getBaseSalary() const
 {
 	return baseSalary;
 }
+
 // calculate earnings;
-// override virtual function earnings in CommissionEmployee
+	// override virtual function earnings in CommissionEmployee
 double BasePlusCommissionEmployee::earnings() const 
 {
 	return getBaseSalary() + CommissionEmployee::earnings();
 }
-// return a string representation of a BasePlusCommissionEmployee
+	// return a string representation of a BasePlusCommissionEmployee
 string BasePlusCommissionEmployee::toString() const {
 	ostringstream output;
 	output << fixed << setprecision(2);

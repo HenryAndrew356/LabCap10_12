@@ -16,7 +16,7 @@ int main()
 	SalariedEmployee salariedEmployee{"John", "Smith", "111-11-1111", 800 };
 	CommissionEmployee commissionEmployee{ "Sue", "Jones", "333-33-3333", 10000, .06 };
 	BasePlusCommissionEmployee basePlusCommissionEmployee{
-	"Bob", "Lewis", "444-44-4444", 5000, .04, 300 };
+	"Bob", "Lewis", "444-44-4444", 5000, .04, 300 };	
 
 	// output each Employee’s information and earnings using static binding
 	cout << "EMPLOYEES PROCESSED INDIVIDUALLY USING STATIC BINDING\n"
@@ -27,12 +27,16 @@ int main()
 		<<basePlusCommissionEmployee.toString()
 		<< "\nearned $" << basePlusCommissionEmployee.earnings()<< "\n\n";
 
+	cout << "-------------------------------------------------------" << endl;
+	cout << "-------------------------------------------------------" << endl;
+
 	// create and initialize vector of three base-class pointers
 	vector<Employee*> employees{ &salariedEmployee, &commissionEmployee,
 	&basePlusCommissionEmployee };
 	cout << "EMPLOYEES PROCESSED POLYMORPHICALLY VIA DYNAMIC BINDING\n\n";
 	// call virtualViaPointer to print each Employee's information
 	// and earnings using dynamic binding
+	cout << "-------------------------------------------------------" << endl;
 	cout << "VIRTUAL FUNCTION CALLS MADE OFF BASE-CLASS POINTERS\n";
 	for (const Employee* employeePtr : employees) 
 	{
@@ -40,6 +44,7 @@ int main()
 	}
 	// call virtualViaReference to print each Employee's information
 	// and earnings using dynamic binding
+	cout << "--------------------------------------------------------" << endl;
 	cout << "VIRTUAL FUNCTION CALLS MADE OFF BASE-CLASS REFERENCES\n";
 	for (const Employee* employeePtr : employees) 
 	{

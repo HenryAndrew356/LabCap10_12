@@ -25,17 +25,20 @@ double CommissionEmployee::getGrossSales() const { return grossSales; }
 // set commission rate
 void CommissionEmployee::setCommissionRate(double rate) 
 {
-	if (rate <= 0.0 || rate > 1.0) {
+	if (rate <= 0.0 || rate > 1.0) 
+	{
 		throw invalid_argument("Commission rate must be > 0.0 and < 1.0");
 	}
 	commissionRate = rate;
 }
 // return commission rate
-double CommissionEmployee::getCommissionRate() const {
+double CommissionEmployee::getCommissionRate() const
+{
 	return commissionRate;
 }
 // calculate earnings; override pure virtual function earnings in Employee
-double CommissionEmployee::earnings() const {
+double CommissionEmployee::earnings() const 
+{
 	return getCommissionRate() * getGrossSales();
 }
 // return a string representation of CommissionEmployee's information
